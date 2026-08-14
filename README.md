@@ -14,8 +14,8 @@ consistent Editing and Reading views keep the interface quiet while giving
 your notes a distinct visual identity.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-dark.webp">
-  <source media="(prefers-color-scheme: light)" srcset="assets/readme/hero-light.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/hero-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/hero-light.webp">
   <img src="assets/readme/hero-light.webp" alt="ObOrange theme overview in Obsidian" width="100%">
 </picture>
 
