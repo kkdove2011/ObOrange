@@ -149,6 +149,7 @@ settings:
 :root:root body.is-phone.is-floating-nav:not(.mod-toolbar-open) .mod-root .workspace-leaf-content[data-type=markdown]>.view-content:before{content:none}
 :root:root body.is-phone .mod-root .workspace-leaf-content[data-type=markdown]>.view-content>div{mask-image:none}
 :root:root body.is-phone.is-floating-nav:not(.mod-toolbar-open) .mod-root .workspace-leaf-content[data-type=markdown]>.view-content:after{content:none}
+:root:root body.hider-tabs:not(.is-mobile):not(.is-popout-window) .mod-root .workspace-tabs .workspace-tab-header-container{display:block;height:var(--size-4-2);min-height:var(--size-4-2);padding-block:0;visibility:hidden;pointer-events:none}
 :root:root body.is-phone .modal.mod-settings .modal-header:after{content:none}
 :root:root body.is-phone .modal.mod-settings .modal-header{z-index:var(--layer-modal);pointer-events:none;justify-content:center}
 :root:root body.is-phone .modal.mod-settings .modal-title{box-sizing:border-box;width:100%;min-width:0;margin-inline:auto;padding-inline:calc(var(--touch-size-m) + var(--size-4-4));justify-content:center;text-align:center;pointer-events:none}
