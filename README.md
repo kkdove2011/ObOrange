@@ -38,7 +38,11 @@ Headings move through coral, amber, green, teal, blue, and violet. The palette
 creates a recognizable hierarchy without overpowering body text, while inline
 markup stays easy to scan.
 
-<img src="assets/readme/typography-light.webp" alt="ObOrange heading hierarchy and inline Markdown styles" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/typography-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/typography-light.webp">
+  <img src="assets/readme/typography-light.webp" alt="ObOrange heading hierarchy and inline Markdown styles" width="100%">
+</picture>
 
 ## Code that reads consistently
 
@@ -105,8 +109,8 @@ two files when a new release is published.
 ## Optional customization
 
 Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
-community plugin to access the customization options inherited from Cupertino,
-including interface details, typography controls, and layout preferences.
+community plugin to access ObOrange's optional interface, typography,
+accessibility, link, tab, status bar, and media controls.
 
 ## Design foundations
 
