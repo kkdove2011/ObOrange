@@ -54,6 +54,28 @@ a stable charcoal surface with clear token separation.
 | :--: | :--: |
 | <img src="assets/readme/code-reading-dark.webp" alt="Code blocks in ObOrange Reading view"> | <img src="assets/readme/code-editing-dark.webp" alt="Code blocks in ObOrange Live Preview"> |
 
+## Mermaid diagrams with the same visual language
+
+ObOrange coordinates Mermaid nodes, connections, labels, groups, notes, and
+chart colors with the theme's mineral palette in both light and dark modes.
+Style Settings can independently limit the maximum diagram width and height;
+choose **Unrestricted** for either dimension to preserve Mermaid's natural
+rendered size.
+
+```mermaid
+flowchart LR
+    A[Capture an idea] --> B{Enough context?}
+    B -->|No| C[Refine the note]
+    C --> B
+    B -->|Yes| D[Connect related notes]
+    D --> E[Publish knowledge]
+
+    class A primary
+    class C warning
+    class D info
+    class E success
+```
+
 ## Components with purpose
 
 Tables use defined but unobtrusive borders, quotes retain the natural text
