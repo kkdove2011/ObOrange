@@ -1,0 +1,227 @@
+/* ObOrange Mermaid — Mineral Balanced */
+
+body.theme-light .mermaid {
+  --mm-canvas: transparent;
+  --mm-surface: var(--background-primary-alt, #f8f7f5);
+  --mm-surface-raised: var(--background-primary, #fffefc);
+  --mm-cluster: var(--background-primary-alt, #f8f7f5);
+  --mm-text: var(--text-normal, #45485f);
+  --mm-muted: var(--text-muted, #737584);
+  --mm-line: color-mix(in srgb, var(--text-normal, #45485f) 52%, transparent);
+  --mm-border: color-mix(in srgb, var(--text-normal, #45485f) 24%, transparent);
+  --mm-primary: color-mix(in srgb, var(--background-primary, #fffefc) 90%, var(--h1-color, #dc5a68) 10%);
+  --mm-primary-border: var(--h1-color, #dc5a68);
+  --mm-secondary: color-mix(in srgb, var(--background-primary, #fffefc) 90%, var(--h4-color, #2f9b91) 10%);
+  --mm-secondary-border: var(--h4-color, #2f9b91);
+  --mm-info: color-mix(in srgb, var(--background-primary, #fffefc) 90%, var(--h5-color, #4b89b8) 10%);
+  --mm-info-border: var(--h5-color, #4b89b8);
+  --mm-success: color-mix(in srgb, var(--background-primary, #fffefc) 90%, var(--h3-color, #7fa64a) 10%);
+  --mm-success-border: var(--h3-color, #7fa64a);
+  --mm-warning: color-mix(in srgb, var(--background-primary, #fffefc) 88%, var(--h2-color, #d68a3e) 12%);
+  --mm-warning-border: var(--h2-color, #d68a3e);
+  --mm-danger: color-mix(in srgb, var(--background-primary, #fffefc) 88%, var(--h1-color, #dc5a68) 12%);
+  --mm-danger-border: var(--h1-color, #dc5a68);
+  --mm-label-bg: color-mix(in srgb, var(--background-primary, #fffefc) 94%, transparent);
+  --mm-note: color-mix(in srgb, var(--background-primary, #fffefc) 84%, var(--h2-color, #d68a3e) 16%);
+  --mm-note-border: var(--h2-color, #d68a3e);
+}
+
+body.theme-dark .mermaid {
+  --mm-canvas: transparent;
+  --mm-surface: var(--background-secondary, #1c1e21);
+  --mm-surface-raised: var(--background-primary-alt, #17181b);
+  --mm-cluster: var(--background-primary-alt, #17181b);
+  --mm-text: var(--text-normal, #c6c9d1);
+  --mm-muted: var(--text-muted, #a6a6a6);
+  --mm-line: color-mix(in srgb, var(--text-normal, #c6c9d1) 58%, transparent);
+  --mm-border: var(--background-modifier-border-hover, #373a3c);
+  --mm-primary: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h1-color, #ef8994) 18%);
+  --mm-primary-border: var(--h1-color, #ef8994);
+  --mm-secondary: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h4-color, #76c5bc) 18%);
+  --mm-secondary-border: var(--h4-color, #76c5bc);
+  --mm-info: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h5-color, #8db7d8) 18%);
+  --mm-info-border: var(--h5-color, #8db7d8);
+  --mm-success: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h3-color, #a9c978) 18%);
+  --mm-success-border: var(--h3-color, #a9c978);
+  --mm-warning: color-mix(in srgb, var(--background-primary, #131416) 80%, var(--h2-color, #e6ad69) 20%);
+  --mm-warning-border: var(--h2-color, #e6ad69);
+  --mm-danger: color-mix(in srgb, var(--background-primary, #131416) 80%, var(--h1-color, #ef8994) 20%);
+  --mm-danger-border: var(--h1-color, #ef8994);
+  --mm-label-bg: color-mix(in srgb, var(--background-primary, #131416) 94%, transparent);
+  --mm-note: color-mix(in srgb, var(--background-primary, #131416) 76%, var(--h2-color, #e6ad69) 24%);
+  --mm-note-border: var(--h2-color, #e6ad69);
+}
+
+.mermaid {
+  --mm-diagram-max-width: var(--mm-diagram-max-width-setting, 90%);
+  --mm-diagram-max-height: var(--mm-diagram-max-height-setting, 90vh);
+}
+
+.mermaid svg {
+  display: block;
+  width: var(--mm-diagram-max-width) !important;
+  height: auto !important;
+  max-width: var(--mm-diagram-max-width) !important;
+  max-height: var(--mm-diagram-max-height) !important;
+  object-fit: contain;
+  object-position: center top;
+  margin-inline: auto;
+}
+
+/* Flowcharts and shared node geometry */
+.mermaid :is(.node rect, .node circle, .node ellipse, .node polygon, .node path, .stateGroup rect, .statediagram-state rect, .classGroup rect, .er.entityBox) {
+  fill: var(--mm-surface) !important;
+  stroke: var(--mm-border) !important;
+  stroke-width: 1.5px !important;
+}
+
+.mermaid :is(.node rect, .stateGroup rect, .statediagram-state rect, .classGroup rect, .er.entityBox) {
+  rx: 8px;
+  ry: 8px;
+}
+
+.mermaid :is(.label, .nodeLabel, .cluster-label, .edgeLabel, .messageText, .loopText, .noteText, .taskText, .taskTextOutsideRight, .taskTextOutsideLeft, .classText, .stateLabel, text) {
+  color: var(--mm-text) !important;
+  fill: var(--mm-text) !important;
+}
+
+.mermaid :is(.edgePath path, .flowchart-link, .transition, .relation, .relationshipLine, .messageLine0, .messageLine1, .actor-line, .loopLine) {
+  stroke: var(--mm-line) !important;
+  stroke-width: 1.5px !important;
+}
+
+.mermaid :is(marker path, .arrowheadPath) {
+  fill: var(--interactive-accent) !important;
+  stroke: var(--interactive-accent) !important;
+}
+
+.mermaid :is(.edgeLabel, .edgeLabel p, .labelBkg) {
+  color: var(--mm-text) !important;
+  fill: var(--mm-label-bg) !important;
+  background-color: var(--mm-label-bg) !important;
+  border-radius: 4px;
+}
+
+/* Subgraphs and grouped regions */
+.mermaid :is(.cluster rect, .cluster polygon) {
+  fill: var(--mm-cluster) !important;
+  stroke: var(--mm-border) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 4 3 !important;
+  rx: 10px;
+  ry: 10px;
+}
+
+.mermaid .cluster-label text {
+  fill: var(--mm-muted) !important;
+  font-weight: 600;
+}
+
+/* Optional semantic node classes: class A primary; */
+.mermaid :is(.node.primary, .stateGroup.primary, .classGroup.primary) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-primary) !important;
+  stroke: var(--mm-primary-border) !important;
+}
+
+.mermaid :is(.node.secondary, .stateGroup.secondary, .classGroup.secondary) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-secondary) !important;
+  stroke: var(--mm-secondary-border) !important;
+}
+
+.mermaid :is(.node.info, .stateGroup.info, .classGroup.info) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-info) !important;
+  stroke: var(--mm-info-border) !important;
+}
+
+.mermaid :is(.node.success, .stateGroup.success, .classGroup.success) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-success) !important;
+  stroke: var(--mm-success-border) !important;
+}
+
+.mermaid :is(.node.warning, .stateGroup.warning, .classGroup.warning) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-warning) !important;
+  stroke: var(--mm-warning-border) !important;
+}
+
+.mermaid :is(.node.danger, .stateGroup.danger, .classGroup.danger) :is(rect, circle, ellipse, polygon, path) {
+  fill: var(--mm-danger) !important;
+  stroke: var(--mm-danger-border) !important;
+}
+
+/* Sequence diagrams */
+.mermaid :is(.actor, .actor-top, .actor-bottom) {
+  fill: var(--mm-primary) !important;
+  stroke: var(--mm-primary-border) !important;
+  stroke-width: 1.5px !important;
+}
+
+.mermaid :is(.activation0, .activation1, .activation2) {
+  fill: var(--mm-info) !important;
+  stroke: var(--mm-info-border) !important;
+}
+
+.mermaid :is(.note, .state-note) {
+  fill: var(--mm-note) !important;
+  stroke: var(--mm-note-border) !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Class and ER diagrams */
+.mermaid :is(.classGroup line, .stateGroup line) {
+  stroke: var(--mm-border) !important;
+}
+
+.mermaid :is(.er.relationshipLabelBox, .er.attributeBoxEven, .er.attributeBoxOdd) {
+  fill: var(--mm-surface-raised) !important;
+  stroke: var(--mm-border) !important;
+}
+
+/* Gantt charts */
+.mermaid :is(.section0, .section2) {
+  fill: var(--mm-secondary) !important;
+}
+
+.mermaid :is(.section1, .section3) {
+  fill: var(--mm-info) !important;
+}
+
+.mermaid :is(.task0, .task2, .active0, .active2) {
+  fill: var(--mm-primary) !important;
+  stroke: var(--mm-primary-border) !important;
+}
+
+.mermaid :is(.task1, .task3, .active1, .active3) {
+  fill: var(--mm-secondary) !important;
+  stroke: var(--mm-secondary-border) !important;
+}
+
+.mermaid :is(.done0, .done1, .done2, .done3) {
+  fill: var(--mm-success) !important;
+  stroke: var(--mm-success-border) !important;
+}
+
+.mermaid :is(.grid .tick line, .grid .tick text) {
+  stroke: var(--mm-border) !important;
+  fill: var(--mm-muted) !important;
+}
+
+.mermaid .today {
+  stroke: var(--h1-color) !important;
+}
+
+/* Pie charts */
+.mermaid .pieTitleText {
+  fill: var(--h1-color) !important;
+  font-weight: 700;
+}
+
+.mermaid .legend text {
+  fill: var(--mm-text) !important;
+}
+
+.mermaid g.slice:nth-of-type(6n + 1) path { fill: var(--h1-color) !important; }
+.mermaid g.slice:nth-of-type(6n + 2) path { fill: var(--h2-color) !important; }
+.mermaid g.slice:nth-of-type(6n + 3) path { fill: var(--h3-color) !important; }
+.mermaid g.slice:nth-of-type(6n + 4) path { fill: var(--h4-color) !important; }
+.mermaid g.slice:nth-of-type(6n + 5) path { fill: var(--h5-color) !important; }
+.mermaid g.slice:nth-of-type(6n) path { fill: var(--h6-color) !important; }
