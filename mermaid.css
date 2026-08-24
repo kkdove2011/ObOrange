@@ -27,29 +27,48 @@ body.theme-light .mermaid {
 }
 
 body.theme-dark .mermaid {
-  --mm-canvas: transparent;
-  --mm-surface: var(--background-secondary, #1c1e21);
-  --mm-surface-raised: var(--background-primary-alt, #17181b);
-  --mm-cluster: var(--background-primary-alt, #17181b);
-  --mm-text: var(--text-normal, #c6c9d1);
-  --mm-muted: var(--text-muted, #a6a6a6);
-  --mm-line: color-mix(in srgb, var(--text-normal, #c6c9d1) 58%, transparent);
-  --mm-border: var(--background-modifier-border-hover, #373a3c);
-  --mm-primary: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h1-color, #ef8994) 18%);
-  --mm-primary-border: var(--h1-color, #ef8994);
-  --mm-secondary: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h4-color, #76c5bc) 18%);
-  --mm-secondary-border: var(--h4-color, #76c5bc);
-  --mm-info: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h5-color, #8db7d8) 18%);
-  --mm-info-border: var(--h5-color, #8db7d8);
-  --mm-success: color-mix(in srgb, var(--background-primary, #131416) 82%, var(--h3-color, #a9c978) 18%);
-  --mm-success-border: var(--h3-color, #a9c978);
-  --mm-warning: color-mix(in srgb, var(--background-primary, #131416) 80%, var(--h2-color, #e6ad69) 20%);
-  --mm-warning-border: var(--h2-color, #e6ad69);
-  --mm-danger: color-mix(in srgb, var(--background-primary, #131416) 80%, var(--h1-color, #ef8994) 20%);
-  --mm-danger-border: var(--h1-color, #ef8994);
-  --mm-label-bg: color-mix(in srgb, var(--background-primary, #131416) 94%, transparent);
-  --mm-note: color-mix(in srgb, var(--background-primary, #131416) 76%, var(--h2-color, #e6ad69) 24%);
-  --mm-note-border: var(--h2-color, #e6ad69);
+  --h1-color: #dc5a68;
+  --h2-color: #d68a3e;
+  --h3-color: #7fa64a;
+  --h4-color: #2f9b91;
+  --h5-color: #4b89b8;
+  --h6-color: #9866ba;
+  --mm-canvas: #fffefc;
+  --mm-surface: #f8f7f5;
+  --mm-surface-raised: #fffefc;
+  --mm-cluster: #f8f7f5;
+  --mm-text: #45485f;
+  --mm-muted: #737584;
+  --mm-line: color-mix(in srgb, #45485f 52%, transparent);
+  --mm-border: color-mix(in srgb, #45485f 24%, transparent);
+  --mm-primary: color-mix(in srgb, #fffefc 90%, #dc5a68 10%);
+  --mm-primary-border: #dc5a68;
+  --mm-secondary: color-mix(in srgb, #fffefc 90%, #2f9b91 10%);
+  --mm-secondary-border: #2f9b91;
+  --mm-info: color-mix(in srgb, #fffefc 90%, #4b89b8 10%);
+  --mm-info-border: #4b89b8;
+  --mm-success: color-mix(in srgb, #fffefc 90%, #7fa64a 10%);
+  --mm-success-border: #7fa64a;
+  --mm-warning: color-mix(in srgb, #fffefc 88%, #d68a3e 12%);
+  --mm-warning-border: #d68a3e;
+  --mm-danger: color-mix(in srgb, #fffefc 88%, #dc5a68 12%);
+  --mm-danger-border: #dc5a68;
+  --mm-label-bg: color-mix(in srgb, #fffefc 94%, transparent);
+  --mm-note: color-mix(in srgb, #fffefc 84%, #d68a3e 16%);
+  --mm-note-border: #d68a3e;
+  color-scheme: light;
+  color: var(--mm-text);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+body.theme-dark .mermaid svg {
+  background: transparent;
+  border-radius: 14px;
 }
 
 .mermaid {
