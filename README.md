@@ -76,6 +76,8 @@ flowchart LR
     class E success
 ```
 
+<img src="assets/readme/mermaid-flowchart-light.webp" alt="ObOrange Mermaid flowchart rendered in light mode" width="100%">
+
 ## Components with purpose
 
 Tables use defined but unobtrusive borders, quotes retain the natural text
