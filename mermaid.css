@@ -74,13 +74,16 @@ body.theme-dark .mermaid svg {
 .mermaid {
   --mm-diagram-max-width: var(--mm-diagram-max-width-setting, 90%);
   --mm-diagram-max-height: var(--mm-diagram-max-height-setting, 90vh);
+  width: fit-content;
+  max-width: var(--mm-diagram-max-width);
+  margin-inline: auto;
 }
 
 .mermaid svg {
   display: block;
-  width: var(--mm-diagram-max-width) !important;
+  width: 100% !important;
   height: auto !important;
-  max-width: var(--mm-diagram-max-width) !important;
+  max-width: 100%;
   max-height: var(--mm-diagram-max-height) !important;
   object-fit: contain;
   object-position: center top;
