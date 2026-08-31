@@ -39,7 +39,7 @@ creates a recognizable hierarchy without overpowering body text, while inline
 markup stays easy to scan.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/typography-dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/typography-light.webp">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kkdove2011/ObOrange/HEAD/assets/readme/typography-light.webp">
   <img src="assets/readme/typography-light.webp" alt="ObOrange heading hierarchy and inline Markdown styles" width="100%">
 </picture>
